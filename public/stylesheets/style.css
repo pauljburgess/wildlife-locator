@@ -1,0 +1,46 @@
+body {
+  background-color: #FEFAE0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+nav {
+  width: 100%;
+  background-color: #738564;
+  height: 80px;
+  line-height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 80px;
+}
+
+a {
+  color: #FEFAE0;
+  text-decoration: none;
+  margin-right: 30px;
+  height: 80px;
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  padding: 0 20px 0 20px;
+}
+
+a:hover {
+  background-color: #A9B388;
+}
+
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#intro {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+}
