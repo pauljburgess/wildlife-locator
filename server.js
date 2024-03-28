@@ -6,6 +6,7 @@ var logger = require('morgan');
 const session = require('express-session')
 const passport = require('passport')
 require('dotenv').config();
+require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
