@@ -44,3 +44,16 @@ h1 {
   margin-right: auto;
   font-size: 18px;
 }
+
+.form-style {
+  display: block;
+  text-align: center;
+  
+}
+
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
