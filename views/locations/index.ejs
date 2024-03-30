@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+
+<h1>Browse Our Current Locations Below</h1>
+
+<% locations.forEach(location => { %>
+    <a href="/"><%= location.name %></a>
+<% }) %>    
+
+
+
+<%- include('../partials/footer') %>

@@ -14,8 +14,18 @@ const create = async(req, res) => {
    }
 }
 
+const index = async (req, res) => {
+    try {
+        const locations = await Location.find({})
+        res.render('locations/index', {locations})
+    } catch(err) {
+        console.log(err)
+    }
+}
+
 
 module.exports = {
     new: newLocation,
     create,
+    index,
 }
