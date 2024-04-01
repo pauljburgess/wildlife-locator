@@ -17,7 +17,7 @@ nav {
   height: 80px;
 }
 
-a {
+nav > a {
   color: #FEFAE0;
   text-decoration: none;
   margin-right: 30px;
