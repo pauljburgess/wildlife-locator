@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const speciesCtrl = require('../controllers/species');
 
 
-//POST /locations/:id/posts
+
+//All routes automatically start with /species
+//GET /species/new
+router.get('/new', speciesCtrl.new)
 
 
 
