@@ -90,6 +90,7 @@ form {
   grid-template-rows: auto;
   grid-template-areas: 
   "header header header details details details"
+  ". . .  species species species "
   ;
 
 }
@@ -104,4 +105,8 @@ form {
 #show-details {
   grid-area: details;
   padding-top: 35px;
+}
+
+#species-seen {
+  grid-area: species;
 }

@@ -7,31 +7,30 @@
         </h1>
         <div id="show-details">
             <%= location.address %>
-            <br><br>
-            <a href="<%= location.website %>">
+                <br><br>
+                <a href="<%= location.website %>">
                     <%= location.website %>
-            </a>
+                </a>
         </div>
-    </section>
 
-    <!-- The form below is nearly identical to the Add Performer one from Mongoose Movies -->
-    <section>
-        <form action="/locations/<%= location._id %>/species" method="POST">
-            <select name="speciesId">
-                <%- species.map(s => 
-                `<option value="${s._id}">${s.name}</option>`
+
+        <!-- Some of the below code is nearly identical to some from Mongoose Movies -->
+        <section id="species-seen">
+           <% if (user) {%>
+            <form action="/locations/<%= location._id %>/species" method="POST">
+                <select name="speciesId">
+                    <%- species.map(s=>
+                        `<option value="${s._id}">${s.name}</option>`
+                        ).join('') %>
+                </select>
+                <button type="submit">Add Species</button>
+            </form>
+            <% } %>
+            <h2>Species seen here:</h2>
+
+            <%- location.wildlife.map(s=>
+                `<div>${s.name}</div>`
                 ).join('') %>
-            </select>
-            <button type="submit">Add Species</button>
-        </form>
+        </section>
     </section>
-
-    <section>
-        <h2>Species Seen at this Location</h2>
-
-        <%- location.wildlife.map(s =>
-            `<div>${s.name}</div>`
-        ).join('') %>    
-    </section>
-
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
