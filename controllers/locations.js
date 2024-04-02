@@ -1,4 +1,5 @@
 const Location = require('../models/location');
+const Species = require('../models/species');
 
 const newLocation = (req, res) => {
     res.render('locations/new')
@@ -25,8 +26,9 @@ const index = async (req, res) => {
 
 const show = async (req, res) => {
     try {
-        const location = await Location.findById(req.params.id)
-        res.render('locations/show', {location})
+        const location = await Location.findById(req.params.id).populate('wildlife');
+        const species = await Species.find({ _id: { $nin: location.wildlife} }).sort('name');
+        res.render('locations/show', {location, species})
     } catch(err) {
         console.log(err)
     }

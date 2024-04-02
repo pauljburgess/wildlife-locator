@@ -14,5 +14,16 @@
         </div>
     </section>
 
+    <!-- The form below is nearly identical to the Add Performer one from Mongoose Movies -->
+    <section>
+        <form action="/locations/<%= location._id %>/species" method="POST">
+            <select name="speciedId">
+                <%- species.map(s => 
+                `<option value="${s._id}">${s.name}</option>`
+                ).join('') %>
+            </select>
+            <button type="submit">Add Species</button>
+        </form>
+    </section>
 
 <%- include('../partials/footer') %>

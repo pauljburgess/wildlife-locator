@@ -5,8 +5,11 @@ const locationSchema = new Schema({
     name: String,
     address: String,
     website: String,
+    wildlife: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Species'
+    }]
 })
-
 
 
 
