@@ -9,6 +9,7 @@ router.get('/', locationCtrl.index);
 router.get('/new', locationCtrl.new);
 //POST /locations
 router.post('/', locationCtrl.create);
-
+//GET /locations/:id
+router.get('/:id', locationCtrl.show);
 
 module.exports = router;

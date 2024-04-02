@@ -23,9 +23,19 @@ const index = async (req, res) => {
     }
 }
 
+const show = async (req, res) => {
+    try {
+        const location = await Location.findById(req.params.id)
+        res.render('locations/show', {location})
+    } catch(err) {
+        console.log(err)
+    }
+}
+
 
 module.exports = {
     new: newLocation,
     create,
     index,
+    show,
 }
