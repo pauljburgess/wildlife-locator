@@ -6,10 +6,11 @@ const speciesCtrl = require('../controllers/species');
 
 //All routes automatically start with /species
 //GET /species/new
-router.get('/new', speciesCtrl.new)
+router.get('/species/new', speciesCtrl.new)
 //POST /species
-router.post('/', speciesCtrl.create);
-
+router.post('/species', speciesCtrl.create);
+//POST /locations/:id/species
+router.post('/locations/:id/species', speciesCtrl.addSpecies)
 
 
 

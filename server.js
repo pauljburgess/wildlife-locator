@@ -42,7 +42,7 @@ app.use(function(req, res, next) {
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/locations', locationsRouter);
-app.use('/species', speciesRouter);
+app.use('/', speciesRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
