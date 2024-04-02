@@ -16,7 +16,7 @@ const create = async(req, res) => {
 
 const index = async (req, res) => {
     try {
-        const locations = await Location.find({})
+        const locations = await Location.find({}).sort('name')
         res.render('locations/index', {locations})
     } catch(err) {
         console.log(err)
