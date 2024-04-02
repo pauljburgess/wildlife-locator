@@ -1,11 +1,13 @@
 <%- include('../partials/header') %>
 
-<h1>Browse Our Current Locations Below</h1>
+    <h1>Browse Our Current Locations Below</h1>
+    <section id="locations-index">
+        <% locations.forEach(location=> { %>
+            <a href="/">
+                <%= location.name %>
+            </a>
+            <% }) %>
+    </section>
 
-<% locations.forEach(location => { %>
-    <a href="/"><%= location.name %></a>
-<% }) %>    
 
-
-
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

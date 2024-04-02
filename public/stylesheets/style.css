@@ -27,7 +27,7 @@ nav > a {
   padding: 0 20px 0 20px;
 }
 
-a:hover {
+nav > a:hover {
   background-color: #A9B388;
 }
 
@@ -57,4 +57,21 @@ form {
   margin-right: auto;
   text-align: left;
   font-size: 20px;
+}
+
+#locations-index {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 100px;
+  
+  grid-auto-flow: row;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+#locations-index > a {
+  
+  border: 1px solid black;
+  place-self: center;
 }

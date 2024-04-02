@@ -7,7 +7,7 @@ const newLocation = (req, res) => {
 const create = async(req, res) => {
     try {
         await Location.create(req.body)
-        res.redirect('/')
+        res.redirect('locations')
    } catch(err) {
         console.log(err)
         res.render('locations/new', {errorMsg: err.message})
