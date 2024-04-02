@@ -29,7 +29,7 @@
     <section>
         <h2>Species Seen at this Location</h2>
 
-        <% location.wildlife.map(s =>
+        <%- location.wildlife.map(s =>
             `<div>${s.name}</div>`
         ).join('') %>    
     </section>
