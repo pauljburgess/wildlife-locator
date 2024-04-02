@@ -1,8 +1,17 @@
 <%- include('../partials/header') %>
 
-    <h1><%= location.name %></h1>
-    <section id="locations-index">
-       
+
+    <section id="show-container">
+        <h1 id="show-header">
+            <%= location.name %>
+        </h1>
+        <div id="show-details">
+            <%= location.address %>
+            <br><br>
+            <a href="<%= location.website %>">
+                    <%= location.website %>
+            </a>
+        </div>
     </section>
 
 

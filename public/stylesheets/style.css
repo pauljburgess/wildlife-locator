@@ -81,3 +81,27 @@ form {
 #locations-index > a:hover {
   text-decoration: underline;
 }
+
+#show-container {
+  margin-top: 75px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "header header header details details details"
+  ;
+
+}
+
+#show-header {
+  text-align: left;
+  font-family: "Josefin Sans";
+  font-size: 40px;
+  grid-area: header;
+}
+
+#show-details {
+  grid-area: details;
+  padding-top: 35px;
+}
