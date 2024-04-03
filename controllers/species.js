@@ -22,9 +22,18 @@ const addSpecies = async (req, res) => {
     res.redirect(`/locations/${location._id}`)
 }
 
+const severSpecies = async (req, res) => {
+    const location = await Location.findById(req.params.locId)
+    const idx = await location.wildlife.indexOf(req.params.specId)
+    location.wildlife.splice(idx, 1)
+    await location.save();
+    res.redirect(`/locations/${req.params.locId}`)
+}
+
 
 module.exports = {
     new: newSpecies,
     create,
-    addSpecies
+    addSpecies,
+    update: severSpecies
 }
