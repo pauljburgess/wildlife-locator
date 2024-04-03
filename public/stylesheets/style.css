@@ -64,6 +64,11 @@ form {
   font-size: 20px;
 }
 
+#note{
+  font-size: 15px;
+}
+
+
 #locations-index {
   justify-content: center;
   display: grid;
