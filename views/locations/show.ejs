@@ -34,10 +34,12 @@
                                     <%=s.name %>
                                 </div>
                                 <% if (user) { %>
+                                 <div>   
                                     <form id="del-btn" action="/locations/<%= location._id %>/species/<%= s._id %>?_method=PUT" method="POST">
                                         <button type="submit">X</button>
                                     </form>
                                     <% } %>
+                                </div>    
                             </div>    
                     <% }) %>
             

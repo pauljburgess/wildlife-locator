@@ -102,6 +102,12 @@ form {
   grid-area: header;
 }
 
+.species-entry {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 #show-details {
   grid-area: details;
   padding-top: 35px;
