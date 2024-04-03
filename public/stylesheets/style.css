@@ -90,7 +90,7 @@ form {
   grid-template-rows: auto;
   grid-template-areas: 
   "header header header details details details"
-  ". . .  species species species "
+  "species species species . . ."
   ;
 
 }
@@ -109,4 +109,9 @@ form {
 
 #species-seen {
   grid-area: species;
+}
+
+#del-btn {
+  display: inline;
+  text-align: right;
 }

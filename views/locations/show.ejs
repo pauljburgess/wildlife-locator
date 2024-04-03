@@ -27,10 +27,14 @@
             </form>
             <% } %>
             <h2>Species seen here:</h2>
-
-            <%- location.wildlife.map(s=>
-                `<div>${s.name}</div>`
-                ).join('') %>
+            <% location.wildlife.forEach(s => { %>
+                <div> <%=s.name %></div>
+                <% if (user) { %>
+                    <form id="del-btn"  action="/species/<%= s._id %>?_method=DELETE" method="POST">
+                        <button type="submit">X</button>
+                    </form> 
+                <% } %>
+            <% }) %>
         </section>
     </section>
     <%- include('../partials/footer') %>
