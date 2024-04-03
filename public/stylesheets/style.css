@@ -111,7 +111,11 @@ form {
   grid-area: species;
 }
 
+.species-name {
+  display: inline;
+}
+
 #del-btn {
   display: inline;
-  text-align: right;
+  
 }

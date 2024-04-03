@@ -16,25 +16,31 @@
 
         <!-- Some of the below code is nearly identical to some from Mongoose Movies -->
         <section id="species-seen">
-           <% if (user) {%>
-            <form action="/locations/<%= location._id %>/species" method="POST">
-                <select name="speciesId">
-                    <%- species.map(s=>
-                        `<option value="${s._id}">${s.name}</option>`
-                        ).join('') %>
-                </select>
-                <button type="submit">Add Species</button>
-            </form>
-            <% } %>
-            <h2>Species seen here:</h2>
-            <% location.wildlife.forEach(s => { %>
-                <div> <%=s.name %></div>
-                <% if (user) { %>
-                    <form id="del-btn"  action="/species/<%= s._id %>?_method=DELETE" method="POST">
-                        <button type="submit">X</button>
-                    </form> 
+            <% if (user) {%>
+                <form action="/locations/<%= location._id %>/species" method="POST">
+                    <select name="speciesId">
+                        <%- species.map(s=>
+                            `<option value="${s._id}">${s.name}</option>`
+                            ).join('') %>
+                    </select>
+                    <button type="submit">Add Species</button>
+                </form>
                 <% } %>
-            <% }) %>
+                    <h2>Species seen here:</h2>
+                    
+                        <% location.wildlife.forEach(s=> { %>
+                            <div class="species-entry">
+                                <div class="species-name">
+                                    <%=s.name %>
+                                </div>
+                                <% if (user) { %>
+                                    <form id="del-btn" action="/species/<%= s._id %>?_method=DELETE" method="POST">
+                                        <button type="submit">X</button>
+                                    </form>
+                                    <% } %>
+                            </div>    
+                    <% }) %>
+            
         </section>
     </section>
     <%- include('../partials/footer') %>
