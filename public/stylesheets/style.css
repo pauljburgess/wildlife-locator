@@ -95,7 +95,7 @@ form {
   grid-template-rows: auto;
   grid-template-areas: 
   "header header header details details details"
-  "species species species . . ."
+  "species species species map map map"
   ;
 
 }
@@ -116,11 +116,19 @@ form {
 #show-details {
   grid-area: details;
   padding-top: 35px;
+  padding-left: 35px;
 }
 
 #species-seen {
   grid-area: species;
 }
+
+#map {
+  height: 250px;
+  padding-left: 35px;
+  grid-area: map;
+}
+
 
 .species-name {
   display: inline;
