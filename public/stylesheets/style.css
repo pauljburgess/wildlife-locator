@@ -31,9 +31,11 @@ nav > a:hover {
   background-color: #A9B388;
 }
 
-nav > a#log-in {
-  justify-self: flex-end;
+#log-in, #log-out {
+  margin-left: auto;
 }
+
+
 
 h1 {
   text-align: center;
