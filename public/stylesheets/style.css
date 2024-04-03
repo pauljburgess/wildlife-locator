@@ -125,7 +125,7 @@ form {
 
 #map {
   height: 250px;
-  padding-left: 35px;
+  margin-left: 35px;
   grid-area: map;
 }
 
