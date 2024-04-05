@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const speciesSchema = new Schema({
-    name: String,
+    name: {
+        type: String,
+        required: true,
+    },
     category: {type: String, enum: ['bird', 'mammal', 'reptile', 'plant']},
 });
 
