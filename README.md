@@ -20,7 +20,7 @@ Once logged in, a user would also be able to:
 
 ---
 
-### **Languages Employed**
+### **Technologies Employed**
 
 - HTML 
 - CSS
