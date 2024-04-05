@@ -1,4 +1,4 @@
-// Followed this tutorial: https://www.youtube.com/watch?v=vmOAC0cyFso
+// I followed this tutorial to help create this feature: https://www.youtube.com/watch?v=vmOAC0cyFso
 const axios = require('axios')
 const API_KEY = process.env.GOOGLE_MAPS_API_KEY
 

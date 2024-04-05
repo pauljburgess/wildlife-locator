@@ -11,7 +11,6 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 const locationsRouter = require('./routes/locations');
 const speciesRouter = require('./routes/species');
 
@@ -42,7 +41,6 @@ app.use(function(req, res, next) {
 
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/locations', locationsRouter);
 app.use('/', speciesRouter);
 // catch 404 and forward to error handler

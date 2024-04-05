@@ -32,7 +32,6 @@ const show = async (req, res) => {
         const species = await Species.find({ _id: { $nin: location.wildlife} }).sort('name');
         const address = await location.address
         const coords = await getCoords.getLatLon(address)
-        console.log(coords)
         res.render('locations/show', {location, species, coords})
     } catch(err) {
         console.log(err)

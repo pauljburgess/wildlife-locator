@@ -15,6 +15,7 @@ const create = async(req, res) => {
    }
 }
 
+//This function is very similar to the "addToCast" function from Mongoose Movies
 const addSpecies = async (req, res) => {
     const location = await Location.findById(req.params.id)
     location.wildlife.push(req.body.speciesId);
